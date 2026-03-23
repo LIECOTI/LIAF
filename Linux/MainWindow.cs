@@ -15,25 +15,26 @@ public static class MainWindow
         stack.SetHexpand(true);
         stack.SetVexpand(true);
 
-        stack.AddTitled(Pages.HomePage.Create(), "home", "🏠 Главная");
-        stack.AddTitled(Pages.BasicFlashPage.Create(), "basic", "⚡ Базовая прошивка");
-        stack.AddTitled(Pages.AdvancedFlashPage.Create(), "advanced", "🔧 Расширенная");
-        stack.AddTitled(Pages.CustomFlashPage.Create(), "custom", "🎯 Своя прошивка");
-        stack.AddTitled(Pages.WiredFlashPage.Create(), "wired", "🔌 Sideload/Push");
-        stack.AddTitled(Pages.PatcherPage.Create(), "patcher", "🩹 Патчер");
-        stack.AddTitled(Pages.PartitionPage.Create(), "partition", "💾 Разделы");
-        stack.AddTitled(Pages.FormatExtractPage.Create(), "format", "🗑 Формат/Извлечение");
-        stack.AddTitled(Pages.AppManagerPage.Create(), "apps", "📦 Приложения");
-        stack.AddTitled(Pages.ScrcpyPage.Create(), "scrcpy", "📱 Scrcpy");
-        stack.AddTitled(Pages.OthersPage.Create(), "others", "🛠 Другое");
-        stack.AddTitled(Pages.SettingsPage.Create(), "settings", "⚙ Настройки");
+        stack.AddTitled(Pages.HomePage.Create(), "home", "Главная");
+        stack.AddTitled(Pages.BasicFlashPage.Create(), "basic", "Базовая прошивка");
+        stack.AddTitled(Pages.AdvancedFlashPage.Create(), "advanced", "Расширенная");
+        stack.AddTitled(Pages.CustomFlashPage.Create(), "custom", "Своя прошивка");
+        stack.AddTitled(Pages.WiredFlashPage.Create(), "wired", "Sideload / Push");
+        stack.AddTitled(Pages.PatcherPage.Create(), "patcher", "Патчер");
+        stack.AddTitled(Pages.PartitionPage.Create(), "partition", "Разделы");
+        stack.AddTitled(Pages.FormatExtractPage.Create(), "format", "Формат / Извлечение");
+        stack.AddTitled(Pages.FirmwarePage.Create(), "firmware", "Прошивки (Xiaomi)");
+        stack.AddTitled(Pages.AppManagerPage.Create(), "apps", "Приложения");
+        stack.AddTitled(Pages.ScrcpyPage.Create(), "scrcpy", "Scrcpy");
+        stack.AddTitled(Pages.OthersPage.Create(), "others", "Другое");
+        stack.AddTitled(Pages.SettingsPage.Create(), "settings", "Настройки");
 
         var sidebar = Gtk.StackSidebar.New();
         sidebar.SetStack(stack);
         sidebar.SetSizeRequest(220, -1);
 
         var headerBar = Adw.HeaderBar.New();
-        headerBar.SetTitleWidget(Adw.WindowTitle.New("LIAF", "v0.2.0"));
+        headerBar.SetTitleWidget(Adw.WindowTitle.New("LIAF", "v0.3.0"));
 
         var rightBox = Gtk.Box.New(Gtk.Orientation.Vertical, 0);
         rightBox.Append(headerBar);

@@ -47,10 +47,10 @@ public static class BasicFlashPage
         // Bootloader
         p.Append(UIHelper.SectionLabel("Bootloader"));
         var br = UIHelper.HBox();
-        var unlockBtn = UIHelper.Btn("🔓 Unlock", "destructive-action");
+        var unlockBtn = UIHelper.Btn("Unlock", "destructive-action");
         unlockBtn.OnClicked += (s, e) => RunFb("flashing unlock", "UNLOCK BOOTLOADER...");
         br.Append(unlockBtn);
-        var lockBtn = UIHelper.Btn("🔒 Lock", "destructive-action");
+        var lockBtn = UIHelper.Btn("Lock", "destructive-action");
         lockBtn.OnClicked += (s, e) => RunFb("flashing lock", "LOCK BOOTLOADER...");
         br.Append(lockBtn);
         var critUnlock = UIHelper.Btn("Unlock Critical", "destructive-action");

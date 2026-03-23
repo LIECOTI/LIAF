@@ -27,7 +27,7 @@ public static class PatcherPage
         p.Append(magiskRow);
 
         var magiskBtnRow = UIHelper.HBox();
-        var patchBtn = UIHelper.Btn("🔧 Patch boot.img", "suggested-action");
+        var patchBtn = UIHelper.Btn("Patch boot.img", "suggested-action");
         patchBtn.OnClicked += (s, e) =>
         {
             var boot = bootEntry.GetText();
@@ -43,7 +43,7 @@ public static class PatcherPage
         };
         magiskBtnRow.Append(patchBtn);
 
-        var infoBtn = UIHelper.Btn("ℹ️ Info boot.img");
+        var infoBtn = UIHelper.Btn("Info boot.img");
         infoBtn.OnClicked += (s, e) =>
         {
             var boot = bootEntry.GetText();
@@ -74,7 +74,7 @@ public static class PatcherPage
 
         var payBtnRow = UIHelper.HBox();
 
-        var listBtn = UIHelper.Btn("📋 Список разделов");
+        var listBtn = UIHelper.Btn("Список разделов");
         listBtn.OnClicked += (s, e) =>
         {
             var pay = payEntry.GetText();
@@ -93,7 +93,7 @@ public static class PatcherPage
         };
         payBtnRow.Append(listBtn);
 
-        var extractAllBtn = UIHelper.Btn("📦 Извлечь все", "suggested-action");
+        var extractAllBtn = UIHelper.Btn("Извлечь все", "suggested-action");
         extractAllBtn.OnClicked += (s, e) =>
         {
             var pay = payEntry.GetText(); var outDir = outEntry.GetText();

@@ -23,7 +23,7 @@ public static class SettingsPage
         fbEntry.SetText(ProcessHelper.FastbootPath);
         p.Append(fbEntry);
 
-        var saveBtn = UIHelper.Btn("💾 Сохранить", "suggested-action");
+        var saveBtn = UIHelper.Btn("Сохранить", "suggested-action");
         saveBtn.OnClicked += (s, e) =>
         {
             ProcessHelper.AdbPath = adbEntry.GetText() ?? "adb";
@@ -31,7 +31,6 @@ public static class SettingsPage
         };
         p.Append(saveBtn);
 
-        // Тест
         p.Append(UIHelper.SectionLabel("Проверка"));
         var testRow = UIHelper.HBox();
         var testLabel = Gtk.Label.New(""); testLabel.SetWrap(true); testLabel.SetXalign(0); testLabel.SetHexpand(true);
@@ -49,7 +48,6 @@ public static class SettingsPage
         testRow.Append(testBtn);
         p.Append(testRow);
 
-        // ADB server
         p.Append(UIHelper.SectionLabel("ADB Server"));
         var srvRow = UIHelper.HBox();
         var startSrv = UIHelper.Btn("Start server");
@@ -62,7 +60,7 @@ public static class SettingsPage
 
         p.Append(Gtk.Separator.New(Gtk.Orientation.Horizontal));
 
-        var about = Gtk.Label.New("LIAF — Linux Android Flash Tool\nВерсия 0.1.0\nАналог Uotan Toolbox\n\nАвтор: liecoti");
+        var about = Gtk.Label.New("LIAF — Linux Android Flash Tool\nВерсия 0.3.0\nРазработчик: liecoti");
         about.SetWrap(true); about.SetXalign(0); about.AddCssClass("dim-label");
         p.Append(about);
 

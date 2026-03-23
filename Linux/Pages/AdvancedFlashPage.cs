@@ -18,7 +18,7 @@ public static class AdvancedFlashPage
         p.Append(fileEntry);
 
         var row = UIHelper.HBox();
-        var flashBtn = UIHelper.Btn("⚡ Flash", "destructive-action");
+        var flashBtn = UIHelper.Btn("Flash", "destructive-action");
         flashBtn.OnClicked += (s, e) =>
         {
             var part = partEntry.GetText(); var file = fileEntry.GetText();
@@ -27,7 +27,7 @@ public static class AdvancedFlashPage
         };
         row.Append(flashBtn);
 
-        var bootBtn = UIHelper.Btn("🚀 Boot");
+        var bootBtn = UIHelper.Btn("Boot");
         bootBtn.OnClicked += (s, e) =>
         {
             var file = fileEntry.GetText();
@@ -35,7 +35,7 @@ public static class AdvancedFlashPage
         };
         row.Append(bootBtn);
 
-        var eraseBtn = UIHelper.Btn("🗑 Erase", "destructive-action");
+        var eraseBtn = UIHelper.Btn("Erase", "destructive-action");
         eraseBtn.OnClicked += (s, e) =>
         {
             var part = partEntry.GetText();

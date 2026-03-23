@@ -23,7 +23,7 @@ public static class HomePage
         _devDrop.SetHexpand(true);
         row.Append(_devDrop);
 
-        var refBtn = UIHelper.Btn("🔄 Обновить", "suggested-action");
+        var refBtn = UIHelper.Btn("Обновить", "suggested-action");
         refBtn.OnClicked += OnRefresh;
         row.Append(refBtn);
         p.Append(row);
@@ -37,19 +37,19 @@ public static class HomePage
 
         // Кнопки устройства
         var dRow = UIHelper.HBox();
-        var detBtn = UIHelper.Btn("📋 Подробнее");
+        var detBtn = UIHelper.Btn("Подробнее");
         detBtn.OnClicked += OnDetail;
         dRow.Append(detBtn);
 
-        var batBtn = UIHelper.Btn("🔋 Батарея");
+        var batBtn = UIHelper.Btn("Батарея");
         batBtn.OnClicked += OnBattery;
         dRow.Append(batBtn);
 
-        var wifiBtn = UIHelper.Btn("📶 WiFi ADB (tcpip 5555)");
+        var wifiBtn = UIHelper.Btn("WiFi ADB (tcpip 5555)");
         wifiBtn.OnClicked += OnWifi;
         dRow.Append(wifiBtn);
 
-        var discBtn = UIHelper.Btn("❌ Disconnect All");
+        var discBtn = UIHelper.Btn("Disconnect All");
         discBtn.OnClicked += (s, e) => RunAdb("disconnect", "Отключение всех...");
         dRow.Append(discBtn);
         p.Append(dRow);
@@ -90,7 +90,7 @@ public static class HomePage
         var sRow = UIHelper.HBox();
         var shellEntry = UIHelper.Entry("Команда (без adb)");
         sRow.Append(shellEntry);
-        var shellBtn = UIHelper.Btn("▶ Run", "suggested-action");
+        var shellBtn = UIHelper.Btn("Run", "suggested-action");
         shellBtn.OnClicked += (s, e) =>
         {
             var cmd = shellEntry.GetText();

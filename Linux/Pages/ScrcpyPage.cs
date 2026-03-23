@@ -33,7 +33,7 @@ public static class ScrcpyPage
         var recEntry = UIHelper.Entry("Путь записи (output.mp4)");
         p.Append(recEntry);
 
-        var startBtn = UIHelper.Btn("▶ Запустить Scrcpy", "suggested-action");
+        var startBtn = UIHelper.Btn("Запустить Scrcpy", "suggested-action");
         startBtn.OnClicked += (s, e) =>
         {
             var args = "";

@@ -23,7 +23,7 @@ public static class CustomFlashPage
         optBox.Append(chkVerity); optBox.Append(chkVerification);
         p.Append(optBox);
 
-        var flashBtn = UIHelper.Btn("⚡ Flash", "destructive-action");
+        var flashBtn = UIHelper.Btn("Flash", "destructive-action");
         flashBtn.OnClicked += (s, e) =>
         {
             var part = partEntry.GetText(); var file = fileEntry.GetText();
