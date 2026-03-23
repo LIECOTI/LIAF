@@ -20,6 +20,7 @@ public static class MainWindow
         stack.AddTitled(Pages.AdvancedFlashPage.Create(), "advanced", "🔧 Расширенная");
         stack.AddTitled(Pages.CustomFlashPage.Create(), "custom", "🎯 Своя прошивка");
         stack.AddTitled(Pages.WiredFlashPage.Create(), "wired", "🔌 Sideload/Push");
+        stack.AddTitled(Pages.PatcherPage.Create(), "patcher", "🩹 Патчер");
         stack.AddTitled(Pages.PartitionPage.Create(), "partition", "💾 Разделы");
         stack.AddTitled(Pages.FormatExtractPage.Create(), "format", "🗑 Формат/Извлечение");
         stack.AddTitled(Pages.AppManagerPage.Create(), "apps", "📦 Приложения");
@@ -32,7 +33,7 @@ public static class MainWindow
         sidebar.SetSizeRequest(220, -1);
 
         var headerBar = Adw.HeaderBar.New();
-        headerBar.SetTitleWidget(Adw.WindowTitle.New("LIAF", "v0.1.0"));
+        headerBar.SetTitleWidget(Adw.WindowTitle.New("LIAF", "v0.2.0"));
 
         var rightBox = Gtk.Box.New(Gtk.Orientation.Vertical, 0);
         rightBox.Append(headerBar);

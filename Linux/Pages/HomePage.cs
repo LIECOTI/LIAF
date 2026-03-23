@@ -166,7 +166,7 @@ public static class HomePage
             var props = await DeviceManager.GetPropsAsync(d.Serial);
             GLib.Functions.IdleAdd(0, () =>
             {
-                var g = (string key) => { string v; return props.TryGetValue(key, out v) ? v : "—"; };
+                var g = (string key) => { string? v; return props.TryGetValue(key, out v) && v != null ? v : "—"; };
                 _infoLabel!.SetText(
                     $"Бренд: {g("ro.product.brand")}\n"
                     + $"Модель: {g("ro.product.model")}\n"

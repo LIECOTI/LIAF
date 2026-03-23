@@ -8,5 +8,6 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="GirCore.Adw-1" Version="0.5.*" />
+    <PackageReference Include="SharpCompress" Version="0.38.*" />
   </ItemGroup>
 </Project>
