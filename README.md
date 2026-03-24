@@ -10,9 +10,7 @@ Download the .deb package from Releases and install it. Dependencies (adb, fastb
     sudo apt install ./LIAF_0.3.0_amd64.deb
 
 **Fedora / RedHat / openSUSE**
-Download the .rpm package and install it:
-
-    sudo dnf install ./liaf-0.3.0-2.x86_64.rpm
+Soon...
 
 ## Additional Dependencies
 Most tools are installed automatically. For specific features, you might need:
