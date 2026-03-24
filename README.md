@@ -2,24 +2,37 @@
 
 Advanced GUI utility for managing Android devices via ADB and Fastboot.
 
-## Platforms
-* Linux: C# + GTK4/Adwaita (Active)
-* Windows: C# + WinUI3 (Planned)
-* Android: Kotlin + Miuix (Planned)
+## Installation (Linux)
+
+**Debian / Ubuntu / Linux Mint**
+Download the .deb package from Releases and install it. Dependencies (adb, fastboot, scrcpy, unzip) will be installed automatically!
+
+    sudo apt install ./LIAF_0.3.0_amd64.deb
+
+**Fedora / RedHat / openSUSE**
+Download the .rpm package and install it:
+
+    sudo dnf install ./liaf-0.3.0-2.x86_64.rpm
+
+## Additional Dependencies
+Most tools are installed automatically. For specific features, you might need:
+
+1. Magisk Patcher: magiskboot (place it in /usr/local/bin/)
+2. Payload.bin Extractor: payload-dumper-go. Install via Go:
+
+    go install github.com/svencyl/payload-dumper-go@latest
+    sudo mv ~/go/bin/payload-dumper-go /usr/local/bin/
 
 ## Features
 * Device Connection: ADB, Fastboot, Wireless ADB, ADB Pair.
-* Flashing: Flash, boot, erase partitions, flash with disable-verity/verification.
-* Xiaomi Firmware: Built-in parser for downloading ROMs via a high-speed mirror by codename.
-* Partition Management: View by-name, format, wipe, extract partitions.
-* App Manager: Install, uninstall, disable, enable, list packages.
-* Modding: Magisk boot.img patcher, payload.bin extractor, FRP reset.
-* Tools: Scrcpy screen mirroring, logcat, dmesg, shell access.
+* Flashing: Flash, boot, erase partitions, disable-verity.
+* Xiaomi Firmware: Parser for downloading ROMs via Aliyun mirror.
+* Partition Management: View by-name, format, wipe, extract.
+* App Manager: Install, uninstall, disable, enable, list.
+* Modding: Magisk patcher, payload.bin extractor, FRP reset.
+* Tools: Scrcpy, logcat, dmesg, shell access.
 
-## Build (Linux)
-
-    cd Linux
-    dotnet restore
-    dotnet build
-    dotnet run
-
+## Platforms
+* Linux: C# + GTK4/Adwaita (Released)
+* Windows: C# + WinUI3 (In Development)
+* Android: Kotlin + Miuix (In Development)
