@@ -1,0 +1,21 @@
+<Page
+    x:Class="LIAF.Windows.Views.ShellPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.UI.Xaml.Controls">
+    <controls:NavigationView
+        x:Name="NavigationRoot"
+        PaneDisplayMode="Left"
+        IsBackButtonVisible="Collapsed"
+        SelectionChanged="OnSelectionChanged"
+        SettingsInvoked="OnSettingsInvoked">
+        <controls:NavigationView.MenuItems>
+            <controls:NavigationViewItem Content="Devices" Tag="devices" Icon="Devices" IsSelected="True" />
+            <controls:NavigationViewItem Content="APK Install" Tag="apk" Icon="Download" />
+            <controls:NavigationViewItem Content="Logcat" Tag="logcat" Icon="Document" />
+            <controls:NavigationViewItem Content="File Manager" Tag="files" Icon="Folder" />
+            <controls:NavigationViewItem Content="Shell" Tag="shell" Icon="Play" />
+        </controls:NavigationView.MenuItems>
+        <Frame x:Name="ContentFrame" />
+    </controls:NavigationView>
+</Page>
