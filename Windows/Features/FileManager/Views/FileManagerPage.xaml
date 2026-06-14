@@ -1,0 +1,8 @@
+<Page
+    x:Class="LIAF.Windows.Features.FileManager.Views.FileManagerPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Padding="24">
+        <TextBlock Text="FileManager" Style="{ThemeResource TitleTextBlockStyle}" />
+    </Grid>
+</Page>

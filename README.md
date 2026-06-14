@@ -32,5 +32,5 @@ Most tools are installed automatically. For specific features, you might need:
 
 ## Platforms
 * Linux: C# + GTK4/Adwaita (Released)
-* Windows: C# + WinUI3 (In Development)
+* Windows: C# + WinUI3 (Architecture scaffold in `Windows/`, In Development)
 * Android: Kotlin + Miuix (In Development)
